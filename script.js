@@ -1,18 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile menu toggle
+    // Mobile menu toggle with background scroll lock
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
 
     hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        const isActive = navLinks.classList.toggle('active');
         hamburger.classList.toggle('active-bar');
+        
+        if (isActive) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
     });
 
-    // Close mobile menu on click link
+    // Close mobile menu on link click and restore scroll
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
             hamburger.classList.remove('active-bar');
+            document.body.style.overflow = '';
         });
     });
 
@@ -39,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Optional: unobserve after fading in completely
                 observer.unobserve(entry.target);
             }
         });
@@ -74,32 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "https://drive.google.com/thumbnail?id=1ums9R9MwbrzOUx9bGqAbg-r0o0sZSP8w&sz=w1000",
         "https://drive.google.com/thumbnail?id=1v2BIQ04Vds3DJQhcmvsiQo9jJptsMcHW&sz=w1000",
         "https://drive.google.com/thumbnail?id=1vn0DB1NDnctREjo1003wKhA8O4BVCol4&sz=w1000",
-        "https://drive.google.com/thumbnail?id=1zDLFE8lCZ6U_1nNEYY6gcLGlbyNORI8M&sz=w1000",
-        // "#CAKA1947 #STDW (1).jpg",
-        // "#CAKA1947 #STDW (2).jpg",
-        // "#CAKA1947 #STDW.jpg",
-        // "- MEDANG BARAK -#STDW #PENGREBONGAN #PENJORNGEREBONG #NGEREBONG2024 #TERUNATERUNI (1).jpg",
-        // "- MEDANG BARAK -#STDW #PENGREBONGAN #PENJORNGEREBONG #NGEREBONG2024 #TERUNATERUNI.jpg",
-        // "- NAGA RAJA - #STDW #PENGREBONGAN #PENJORNGEREBONG #NGEREBONG2024 #TERUNATERUNI (1).jpg",
-        // "- NAGA RAJA - #STDW #PENGREBONGAN #PENJORNGEREBONG #NGEREBONG2024 #TERUNATERUNI.jpg",
-        // "- SARWA TANGI -Penjor Ngerebong STDW 2025Matur Suksma semeton lan Krama Banjar Lanang-Istri sare (1).jpg",
-        // "- SARWA TANGI -Penjor Ngerebong STDW 2025Matur Suksma semeton lan Krama Banjar Lanang-Istri sare (2).jpg",
-        // "- SARWA TANGI -Penjor Ngerebong STDW 2025Matur Suksma semeton lan Krama Banjar Lanang-Istri sare (3).jpg",
-        // "- SARWA TANGI -Penjor Ngerebong STDW 2025Matur Suksma semeton lan Krama Banjar Lanang-Istri sare (4).jpg",
-        // "- SARWA TANGI -Penjor Ngerebong STDW 2025Matur Suksma semeton lan Krama Banjar Lanang-Istri sare (5).jpg",
-        // "- SARWA TANGI -Penjor Ngerebong STDW 2025Matur Suksma semeton lan Krama Banjar Lanang-Istri sare.jpg",
-        // "DAY - 2 ‼️PUNCAK ACARA (28-02-2026)Perayaan Peringatan HUT Ke-40 ST. Dharma Werdhi dan Pelantik (1).jpg",
-        // "DAY - 2 ‼️PUNCAK ACARA (28-02-2026)Perayaan Peringatan HUT Ke-40 ST. Dharma Werdhi dan Pelantik.jpg",
-        // "DOKUMENTASI ACARA LOMBA MANCING STDW#2 2025 ( 6 JULI 2025 ) #LOMBAMANCINGSTDW#STDW#DHARMAWERDHI# (1).jpg",
-        // "DOKUMENTASI ACARA LOMBA MANCING STDW#2 2025 ( 6 JULI 2025 ) #LOMBAMANCINGSTDW#STDW#DHARMAWERDHI# (2).jpg",
-        // "DOKUMENTASI ACARA LOMBA MANCING STDW#2 2025 ( 6 JULI 2025 ) #LOMBAMANCINGSTDW#STDW#DHARMAWERDHI# (3).jpg",
-        // "DOKUMENTASI ACARA LOMBA MANCING STDW#2 2025 ( 6 JULI 2025 ) #LOMBAMANCINGSTDW#STDW#DHARMAWERDHI#.jpg",
-        // "DOKUMENTASI PERSIAPAN LOMBA MANCING STDW 2022 (1).jpg",
-        // "DOKUMENTASI PERSIAPAN LOMBA MANCING STDW 2022 (2).jpg",
-        // "DOKUMENTASI PERSIAPAN LOMBA MANCING STDW 2022.jpg",
-        // "Parade Baleganjur Bebarongan dalam rangka Hut LPD desa Kesiman ke-32📌22 April 2023📍Wantilan P (1).jpg",
-        // "Parade Baleganjur Bebarongan dalam rangka Hut LPD desa Kesiman ke-32📌22 April 2023📍Wantilan P (2).jpg",
-        // "Parade Baleganjur Bebarongan dalam rangka Hut LPD desa Kesiman ke-32📌22 April 2023📍Wantilan P.jpg"
+        "https://drive.google.com/thumbnail?id=1zDLFE8lCZ6U_1nNEYY6gcLGlbyNORI8M&sz=w1000"
     ];
 
     function shuffleArray(array) {
@@ -164,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         marquee.addEventListener('mousedown', (e) => {
             isDown = true;
             isDragging = false;
+            marquee.dataset.isDragging = 'false';
             marquee.style.cursor = 'grabbing';
             startX = e.pageX - marquee.offsetLeft;
             scrollLeft = marquee.scrollLeft;
@@ -185,17 +167,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const x = e.pageX - marquee.offsetLeft;
             const walk = (x - startX) * 2; // scroll-fast
             marquee.scrollLeft = scrollLeft - walk;
-            if (Math.abs(walk) > 5) isDragging = true;
-        });
-
-        // Prevent opening links if user is dragging
-        const anchors = marquee.querySelectorAll('a');
-        anchors.forEach(a => {
-            a.addEventListener('click', (e) => {
-                if (isDragging) {
-                    e.preventDefault();
-                }
-            });
+            if (Math.abs(walk) > 5) {
+                isDragging = true;
+                marquee.dataset.isDragging = 'true';
+            }
         });
 
         // Touch events for mobile
@@ -203,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         marquee.addEventListener('touchstart', (e) => {
             isTouchDown = true;
             isDragging = false;
+            marquee.dataset.isDragging = 'false';
             startX = e.touches[0].pageX - marquee.offsetLeft;
             scrollLeft = marquee.scrollLeft;
         }, {passive: true});
@@ -216,6 +192,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const x = e.touches[0].pageX - marquee.offsetLeft;
             const walk = (x - startX) * 2;
             marquee.scrollLeft = scrollLeft - walk;
+            if (Math.abs(walk) > 5) {
+                isDragging = true;
+                marquee.dataset.isDragging = 'true';
+            }
         }, {passive: true});
 
         // Auto scroll
@@ -239,4 +219,74 @@ document.addEventListener('DOMContentLoaded', () => {
         autoScroll();
     });
 
+    // Lightbox Modal Logic for Gallery
+    const modal = document.getElementById('gallery-modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const closeModalBtn = document.getElementById('close-modal');
+    const modalOverlay = document.getElementById('modal-overlay');
+
+    function openModal(imgSrc) {
+        modalImg.src = imgSrc;
+        modalTitle.textContent = "Dokumentasi Kegiatan";
+        
+        // Set beautiful, descriptive descriptions based on the image URL or a fallback
+        let desc = "Dokumentasi kegiatan Sekehe Teruna Dharma Werdhi dalam melestarikan nilai adat tradisi, mempererat simakrama, dan membangun kreativitas generasi muda di Bali.";
+        
+        // Analyze image features for richer content
+        if (imgSrc.includes("PENGREBONGAN") || imgSrc.includes("NGEREBONG") || imgSrc.includes("PENJOR")) {
+            modalTitle.textContent = "Penjor Ngerebong ST. Dharma Werdhi";
+            desc = "Karya pembuatan Penjor Ngerebong oleh teruna-teruni ST. Dharma Werdhi. Dengan ornamen anyaman janur tradisional khas Bali yang rumit, penjor ini adalah bentuk bakti suci sekaligus pelestarian tradisi budaya leluhur.";
+        } else if (imgSrc.includes("CAKA") || imgSrc.includes("OGOH")) {
+            modalTitle.textContent = "Karya Seni Ogoh-Ogoh Pemuda STT";
+            desc = "Dokumentasi pembuatan dan pengarakan ogoh-ogoh menjelang Hari Raya Nyepi. Mengintegrasikan teknik patung tradisional dengan rancangan struktur modern untuk mengekspresikan nilai seni spiritual pemuda.";
+        } else if (imgSrc.includes("LOMBAMANCING") || imgSrc.includes("LOMBA")) {
+            modalTitle.textContent = "Kegiatan Penggalian Dana Lomba Mancing";
+            desc = "Keseruan program kewirausahaan pemuda dalam bentuk Lomba Mancing ST. Dharma Werdhi. Kegiatan ini menjadi wadah kolaborasi positif bersama masyarakat sekaligus kemandirian finansial organisasi.";
+        } else if (imgSrc.includes("HUT") || imgSrc.includes("Pelantikan")) {
+            modalTitle.textContent = "Peringatan HUT Ke-40 ST. Dharma Werdhi";
+            desc = "Momen kebersamaan dalam puncak acara Hari Ulang Tahun ke-40 ST. Dharma Werdhi dan pelantikan pengurus baru. Langkah nyata membangun kepemimpinan pemuda yang dinamis dan berakar pada kebersamaan.";
+        } else if (imgSrc.includes("Baleganjur") || imgSrc.includes("Bebarongan")) {
+            modalTitle.textContent = "Parade Baleganjur Bebarongan";
+            desc = "Penampilan atraktif penabuh baleganjur ST. Dharma Werdhi dalam Parade Seni Bebarongan. Kolaborasi ketukan irama gamelan yang megah untuk mengiringi kesenian sakral tradisional.";
+        }
+        
+        modalDescription.textContent = desc;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Attach click listener via event delegation on each marquee
+    marquees.forEach(marquee => {
+        marquee.addEventListener('click', (e) => {
+            // Check if user was dragging
+            if (marquee.dataset.isDragging === 'true') {
+                return;
+            }
+            
+            const galleryItem = e.target.closest('.gallery-item-small');
+            if (galleryItem) {
+                const img = galleryItem.querySelector('img');
+                if (img) {
+                    openModal(img.src);
+                }
+            }
+        });
+    });
+
+    closeModalBtn.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Escape key listener to close modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
 });
