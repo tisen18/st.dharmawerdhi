@@ -1,316 +1,384 @@
 <!doctype html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Company Profile ST. Dharma Werdhi - Organisasi Kepemudaan"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <title>ST. Dharma Werdhi</title>
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="https://drive.google.com/thumbnail?id=1P73uchFr_FpN0Ax1ZkdSrdc0KZtcQkZR&sz=w128"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Company Profile ST. Dharma Werdhi - Organisasi Kepemudaan" />
-  <meta name="referrer" content="no-referrer" />
-  <title>ST. Dharma Werdhi</title>
-  <link rel="icon" type="image/jpeg"
-    href="https://drive.google.com/thumbnail?id=1P73uchFr_FpN0Ax1ZkdSrdc0KZtcQkZR&sz=w128" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-</head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img
+          src="https://drive.google.com/thumbnail?id=1P73uchFr_FpN0Ax1ZkdSrdc0KZtcQkZR&sz=w1000"
+          alt="Logo ST Dharma Werdhi"
+          class="logo-img"
+        />
+        <div><span>ST</span>.Dharma Werdhi</div>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#kegiatan">Kegiatan</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#sosmed">Sosial Media</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </header>
 
-<body>
-  <header class="navbar">
-    <div class="logo">
-      <img src="https://drive.google.com/thumbnail?id=1P73uchFr_FpN0Ax1ZkdSrdc0KZtcQkZR&sz=w1000"
-        alt="Logo ST Dharma Werdhi" class="logo-img" />
-      <div><span>ST</span>.Dharma Werdhi</div>
+    <main>
+      <section id="beranda" class="hero fade-in">
+        <video class="hero-bg-video" autoplay muted loop playsinline>
+          <source
+            src="https://res.cloudinary.com/drhfmxnzc/video/upload/q_auto/f_auto/v1779864707/hero-compressed_et6d63.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="hero-video-overlay"></div>
+        <div class="hero-content">
+          <span class="badge">Om Swastiastu</span>
+          <h1>
+            Sekehe Teruna <br /><span class="highlight">Dharma Werdhi</span>
+          </h1>
+          <p>
+            Mengabdi dengan karya, melestarikan budaya Bali, dan membangun
+            ikatan kreativitas antar generasi muda.
+          </p>
+          <div class="hero-buttons">
+            <a href="#tentang" class="btn btn-primary">Kenali Kami</a>
+          </div>
+        </div>
+        <div class="scroll-prompt">
+          <span>Scroll ke Bawah</span>
+          <div class="scroll-arrow">
+            <i class="bi bi-chevron-double-down"></i>
+          </div>
+        </div>
+      </section>
+
+      <section id="tentang" class="about">
+        <div class="section-title fade-in">
+          <h2>Tentang Kami</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="about-content">
+          <div class="about-image fade-in">
+            <img
+              src="https://drive.google.com/thumbnail?id=1f7B80KnB6srrXRhJvBMhzg1NlZB7uLOx&sz=w1000"
+              alt="Sinergi & Solidaritas ST. Dharma Werdhi"
+              class="img-fluid"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          <div class="about-text fade-in">
+            <h3>Visi & Misi</h3>
+            <p>
+              <strong>ST. Dharma Werdhi</strong> hadir sebagai wadah generasi
+              muda (Sekehe Teruna) untuk berkreativitas, berinovasi, dan menjaga
+              kelestarian adat serta tradisi Bali. Kami berkomitmen dalam
+              membangun generasi muda yang dinamis, solid, dan selalu
+              berkontribusi positif bagi lingkungan sekitar.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <span class="icon">✨</span> Pelestarian Adat & Budaya Bali
+              </li>
+              <li><span class="icon">🤝</span> Simakrama & Kebersamaan</li>
+              <li><span class="icon">🚀</span> Kreativitas Teruna Teruni</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="kegiatan" class="activities">
+        <div class="section-title fade-in">
+          <h2>Kegiatan Kami</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="grid activities-grid">
+          <div class="card fade-in">
+            <div class="card-body">
+              <div class="card-icon"><i class="bi bi-flower1"></i></div>
+              <h3>Tradisi & Budaya</h3>
+              <p>
+                Mengedepankan nilai-nilai tradisi Bali, ST. Dharma Werdhi aktif
+                dalam berbagai kegiatan keagamaan and budaya. Mulai dari
+                penggarapan ogoh-ogoh menjelang Nyepi hingga partisipasi dalam
+                upacara adat, kami berkomitmen untuk melestarikan warisan budaya
+                leluhur dengan sentuhan kreativitas pemuda.
+              </p>
+            </div>
+          </div>
+          <div class="card fade-in">
+            <div class="card-body">
+              <div class="card-icon">
+                <i class="bi bi-heart-pulse-fill"></i>
+              </div>
+              <h3>Bakti Sosial & Lingkungan</h3>
+              <p>
+                Aksi nyata terjun langsung menjaga kebersihan lingkungan desa
+                serta memberikan dukungan moral maupun material bagi warga yang
+                membutuhkan.
+              </p>
+            </div>
+          </div>
+          <div class="card fade-in">
+            <div class="card-body">
+              <div class="card-icon"><i class="bi bi-cash-coin"></i></div>
+              <h3>Penggalian Dana</h3>
+              <p>
+                Mengembangkan jiwa kepemimpinan dan kreativitas pemuda-pemudi
+                dalam mengelola sumber daya organisasi. Melalui berbagai program
+                inovatif, kami belajar berwirausaha, bekerja sama, dan membangun
+                kemandirian finansial untuk mendukung keberlangsungan kegiatan
+                ST. Dharma Werdhi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeri" class="gallery">
+        <div class="section-title fade-in">
+          <h2>Galeri</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="gallery-container fade-in">
+          <!-- Baris 1: Ke Kiri -->
+          <div class="draggable-marquee" data-direction="1">
+            <div class="marquee-inner">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Baris 2: Ke Kanan -->
+          <div class="draggable-marquee" data-direction="-1">
+            <div class="marquee-inner">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Baris 3: Ke Kiri -->
+          <div class="draggable-marquee" data-direction="1">
+            <div class="marquee-inner">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Baris 4: Ke Kanan -->
+          <div class="draggable-marquee" data-direction="-1">
+            <div class="marquee-inner">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Baris 5: Ke Kiri -->
+          <div class="draggable-marquee" data-direction="1">
+            <div class="marquee-inner">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sosmed" class="social-media fade-in">
+        <div class="section-title">
+          <h2>Sosial Media Kami</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="grid social-grid">
+          <!-- Instagram Card -->
+          <div class="social-card instagram-card">
+            <div class="social-icon-wrapper">
+              <i class="bi bi-instagram"></i>
+            </div>
+            <h3>Instagram</h3>
+            <span class="social-handle">@st.dharmawerdhi</span>
+            <p>
+              Ikuti dokumentasi foto terkini, pengumuman resmi, dan kegiatan
+              harian teruna-teruni kami di Instagram.
+            </p>
+            <div class="social-links-wrapper">
+              <a
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/st.dharmawerdhi/"
+                target="_blank"
+                class="social-btn instagram-btn"
+              >
+                <i class="bi bi-instagram"></i> Ikuti Instagram
+              </a>
+            </div>
+          </div>
+          <!-- TikTok Card -->
+          <div class="social-card tiktok-card">
+            <div class="social-icon-wrapper"><i class="bi bi-tiktok"></i></div>
+            <h3>TikTok</h3>
+            <span class="social-handle">@st.dharmawerdhi</span>
+            <p>
+              Tonton keseruan di balik layar, pembuatan penjor dan ogoh-ogoh,
+              serta video kreatif pendek teruna-teruni kami.
+            </p>
+            <div class="social-links-wrapper">
+              <a
+                rel="noopener noreferrer"
+                href="https://www.tiktok.com/@st.dharmawerdhi?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                class="social-btn tiktok-btn"
+              >
+                <i class="bi bi-tiktok"></i> Tonton TikTok
+              </a>
+            </div>
+          </div>
+          <!-- YouTube Card -->
+          <div class="social-card youtube-card">
+            <div class="social-icon-wrapper"><i class="bi bi-youtube"></i></div>
+            <h3>YouTube</h3>
+            <span class="social-handle">ST. Dharma Werdhi</span>
+            <p>
+              Saksikan tayangan lengkap perayaan HUT, parade budaya, dokumenter
+              lomba, dan pertunjukan seni musik kami.
+            </p>
+            <div class="social-links-wrapper">
+              <a
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/@StDharmaWerdhi"
+                target="_blank"
+                class="social-btn youtube-btn"
+              >
+                <i class="bi bi-youtube"></i> Tonton YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontak" class="contact fade-in">
+        <div class="section-title">
+          <h2>Hubungi Kami</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="grid contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="bi bi-file-earmark-text-fill"></i>
+            </div>
+            <h2>Sekretaris STT I</h2>
+            <p>
+              Untuk perihal administrasi, surat menyurat, proposal, atau
+              keanggotaan, silakan hubungi Sekretaris kami.
+            </p>
+            <div class="contact-links">
+              <a
+                rel="noopener noreferrer"
+                href="https://wa.me/+6281999779889"
+                target="_blank"
+                class="contact-btn wa-btn"
+              >
+                <i class="bi bi-whatsapp"></i>
+                Hubungi Sekretaris I
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="bi bi-person-badge-fill"></i>
+            </div>
+            <h2>Ketua STT</h2>
+            <p>
+              Ada pertanyaan atau ingin berkolaborasi? Silakan hubungi Ketua
+              kami untuk informasi lebih lanjut.
+            </p>
+            <div class="contact-links">
+              <a
+                rel="noopener noreferrer"
+                href="https://wa.me/+62895415793800"
+                target="_blank"
+                class="contact-btn wa-btn"
+              >
+                <i class="bi bi-whatsapp"></i>
+                Hubungi Ketua
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="bi bi-file-earmark-text-fill"></i>
+            </div>
+            <h2>Sekretaris STT II</h2>
+            <p>
+              Untuk perihal administrasi, surat menyurat, proposal, atau
+              keanggotaan, silakan hubungi Sekretaris kami.
+            </p>
+            <div class="contact-links">
+              <a
+                rel="noopener noreferrer"
+                href="https://wa.me/+6281329774195"
+                target="_blank"
+                class="contact-btn wa-btn"
+              >
+                <i class="bi bi-whatsapp"></i>
+                Hubungi Sekretaris II
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 ST. Dharma Werdhi. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="gallery-modal" class="modal">
+      <div class="modal-overlay" id="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="close-modal" id="close-modal" aria-label="Close Modal">
+          &times;
+        </button>
+        <div class="modal-body">
+          <div class="modal-image-container">
+            <img id="modal-img" src="" alt="Detail Galeri" />
+          </div>
+          <div class="modal-info">
+            <h2 id="modal-title">Judul Galeri</h2>
+            <div class="modal-divider"></div>
+            <p id="modal-description">
+              Dokumentasi kegiatan dan pelestarian adat budaya oleh
+              pemuda-pemudi ST. Dharma Werdhi.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#beranda">Beranda</a></li>
-      <li><a href="#tentang">Tentang</a></li>
-      <li><a href="#kegiatan">Kegiatan</a></li>
-      <li><a href="#galeri">Galeri</a></li>
-      <li><a href="#sosmed">Sosial Media</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-    </ul>
-  </header>
 
-  <main>
-    <section id="beranda" class="hero fade-in">
-      <video class="hero-bg-video" autoplay muted loop playsinline>
-        <source src="https://res.cloudinary.com/drhfmxnzc/video/upload/q_auto/f_auto/v1779864707/hero-compressed_et6d63.mp4" type="video/mp4" />
-      </video>
-      <div class="hero-video-overlay"></div>
-      <div class="hero-content">
-        <span class="badge">Om Swastiastu</span>
-        <h1>
-          Sekehe Teruna <br /><span class="highlight">Dharma Werdhi</span>
-        </h1>
-        <p>
-          Mengabdi dengan karya, melestarikan budaya Bali, dan membangun
-          ikatan kreativitas antar generasi muda.
-        </p>
-        <div class="hero-buttons">
-          <a href="#tentang" class="btn btn-primary">Kenali Kami</a>
-        </div>
-      </div>
-      <div class="scroll-prompt">
-        <span>Scroll ke Bawah</span>
-        <div class="scroll-arrow"><i class="bi bi-chevron-double-down"></i></div>
-      </div>
-    </section>
-
-    <section id="tentang" class="about">
-      <div class="section-title fade-in">
-        <h2>Tentang Kami</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="about-content">
-        <div class="about-image fade-in">
-          <img src="https://drive.google.com/thumbnail?id=1f7B80KnB6srrXRhJvBMhzg1NlZB7uLOx&sz=w1000"
-            alt="Sinergi & Solidaritas ST. Dharma Werdhi" class="img-fluid" referrerpolicy="no-referrer"
-            style="object-fit: cover; aspect-ratio: 1/1" />
-        </div>
-        <div class="about-text fade-in">
-          <h3>Visi & Misi</h3>
-          <p>
-            <strong>ST. Dharma Werdhi</strong> hadir sebagai wadah generasi
-            muda (Sekehe Teruna) untuk berkreativitas, berinovasi, dan menjaga
-            kelestarian adat serta tradisi Bali. Kami berkomitmen dalam
-            membangun generasi muda yang dinamis, solid, dan selalu
-            berkontribusi positif bagi lingkungan sekitar.
-          </p>
-          <ul class="feature-list">
-            <li>
-              <span class="icon">✨</span> Pelestarian Adat & Budaya Bali
-            </li>
-            <li><span class="icon">🤝</span> Simakrama & Kebersamaan</li>
-            <li><span class="icon">🚀</span> Kreativitas Teruna Teruni</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="kegiatan" class="activities">
-      <div class="section-title fade-in">
-        <h2>Kegiatan Kami</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="grid activities-grid">
-        <div class="card fade-in">
-          <div class="card-body">
-            <div class="card-icon"><i class="bi bi-flower1"></i></div>
-            <h3>Tradisi & Budaya</h3>
-            <p>
-              Mengedepankan nilai-nilai tradisi Bali, ST. Dharma Werdhi aktif
-              dalam berbagai kegiatan keagamaan and budaya. Mulai dari
-              penggarapan ogoh-ogoh menjelang Nyepi hingga partisipasi dalam
-              upacara adat, kami berkomitmen untuk melestarikan warisan budaya
-              leluhur dengan sentuhan kreativitas pemuda.
-            </p>
-          </div>
-        </div>
-        <div class="card fade-in">
-          <div class="card-body">
-            <div class="card-icon"><i class="bi bi-heart-pulse-fill"></i></div>
-            <h3>Bakti Sosial & Lingkungan</h3>
-            <p>
-              Aksi nyata terjun langsung menjaga kebersihan lingkungan desa
-              serta memberikan dukungan moral maupun material bagi warga yang
-              membutuhkan.
-            </p>
-          </div>
-        </div>
-        <div class="card fade-in">
-          <div class="card-body">
-            <div class="card-icon"><i class="bi bi-cash-coin"></i></div>
-            <h3>Penggalian Dana</h3>
-            <p>
-              Mengembangkan jiwa kepemimpinan dan kreativitas pemuda-pemudi
-              dalam mengelola sumber daya organisasi. Melalui berbagai program
-              inovatif, kami belajar berwirausaha, bekerja sama, dan membangun
-              kemandirian finansial untuk mendukung keberlangsungan kegiatan
-              ST. Dharma Werdhi.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="galeri" class="gallery">
-      <div class="section-title fade-in">
-        <h2>Galeri</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="gallery-container fade-in">
-        <!-- Baris 1: Ke Kiri -->
-        <div class="draggable-marquee" data-direction="1">
-          <div class="marquee-inner">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-
-        <!-- Baris 2: Ke Kanan -->
-        <div class="draggable-marquee" data-direction="-1">
-          <div class="marquee-inner">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-
-        <!-- Baris 3: Ke Kiri -->
-        <div class="draggable-marquee" data-direction="1">
-          <div class="marquee-inner">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-
-        <!-- Baris 4: Ke Kanan -->
-        <div class="draggable-marquee" data-direction="-1">
-          <div class="marquee-inner">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-
-        <!-- Baris 5: Ke Kiri -->
-        <div class="draggable-marquee" data-direction="1">
-          <div class="marquee-inner">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="sosmed" class="social-media fade-in">
-      <div class="section-title">
-        <h2>Sosial Media Kami</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="grid social-grid">
-        <!-- Instagram Card -->
-        <div class="social-card instagram-card">
-          <div class="social-icon-wrapper"><i class="bi bi-instagram"></i></div>
-          <h3>Instagram</h3>
-          <span class="social-handle">@st.dharmawerdhi</span>
-          <p>Ikuti dokumentasi foto terkini, pengumuman resmi, dan kegiatan harian teruna-teruni kami di Instagram.</p>
-          <div class="social-links-wrapper">
-            <a href="https://www.instagram.com/st.dharmawerdhi/" target="_blank" class="social-btn instagram-btn">
-              <i class="bi bi-instagram"></i> Ikuti Instagram
-            </a>
-          </div>
-        </div>
-        <!-- TikTok Card -->
-        <div class="social-card tiktok-card">
-          <div class="social-icon-wrapper"><i class="bi bi-tiktok"></i></div>
-          <h3>TikTok</h3>
-          <span class="social-handle">@st.dharmawerdhi</span>
-          <p>Tonton keseruan di balik layar, pembuatan penjor dan ogoh-ogoh, serta video kreatif pendek teruna-teruni
-            kami.</p>
-          <div class="social-links-wrapper">
-            <a href="https://www.tiktok.com/@st.dharmawerdhi?is_from_webapp=1&sender_device=pc" target="_blank"
-              class="social-btn tiktok-btn">
-              <i class="bi bi-tiktok"></i> Tonton TikTok
-            </a>
-          </div>
-        </div>
-        <!-- YouTube Card -->
-        <div class="social-card youtube-card">
-          <div class="social-icon-wrapper"><i class="bi bi-youtube"></i></div>
-          <h3>YouTube</h3>
-          <span class="social-handle">ST. Dharma Werdhi</span>
-          <p>Saksikan tayangan lengkap perayaan HUT, parade budaya, dokumenter lomba, dan pertunjukan seni musik kami.
-          </p>
-          <div class="social-links-wrapper">
-            <a href="https://www.youtube.com/@StDharmaWerdhi" target="_blank" class="social-btn youtube-btn">
-              <i class="bi bi-youtube"></i> Tonton YouTube
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="kontak" class="contact fade-in">
-      <div class="section-title">
-        <h2>Hubungi Kami</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="grid contact-grid">
-
-
-        <div class="contact-card">
-          <div class="contact-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
-          <h2>Sekretaris STT I</h2>
-          <p>
-            Untuk perihal administrasi, surat menyurat, proposal, atau keanggotaan,
-            silakan hubungi Sekretaris kami.
-          </p>
-          <div class="contact-links">
-            <a href="https://wa.me/+6281329774195" target="_blank" class="contact-btn wa-btn">
-              <i class="bi bi-whatsapp"></i>
-              Hubungi Sekretaris I
-            </a>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-icon"><i class="bi bi-person-badge-fill"></i></div>
-          <h2>Ketua STT</h2>
-          <p>
-            Ada pertanyaan atau ingin berkolaborasi? Silakan hubungi Ketua
-            kami untuk informasi lebih lanjut.
-          </p>
-          <div class="contact-links">
-            <a href="https://wa.me/+62895415793800" target="_blank" class="contact-btn wa-btn">
-              <i class="bi bi-whatsapp"></i>
-              Hubungi Ketua
-            </a>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
-          <h2>Sekretaris STT II</h2>
-          <p>
-            Untuk perihal administrasi, surat menyurat, proposal, atau keanggotaan,
-            silakan hubungi Sekretaris kami.
-          </p>
-          <div class="contact-links">
-            <a href="https://wa.me/+6281999779889" target="_blank" class="contact-btn wa-btn">
-              <i class="bi bi-whatsapp"></i>
-              Hubungi Sekretaris II
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 ST. Dharma Werdhi. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Lightbox Modal -->
-  <div id="gallery-modal" class="modal">
-    <div class="modal-overlay" id="modal-overlay"></div>
-    <div class="modal-content">
-      <button class="close-modal" id="close-modal" aria-label="Close Modal">&times;</button>
-      <div class="modal-body">
-        <div class="modal-image-container">
-          <img id="modal-img" src="" alt="Detail Galeri" />
-        </div>
-        <div class="modal-info">
-          <h2 id="modal-title">Judul Galeri</h2>
-          <div class="modal-divider"></div>
-          <p id="modal-description">Dokumentasi kegiatan dan pelestarian adat budaya oleh pemuda-pemudi ST. Dharma
-            Werdhi.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer and Scripts -->
-  <script src="script.js"></script>
-</body>
-
+    <!-- Footer and Scripts -->
+    <script src="script.js"></script>
+  </body>
 </html>
